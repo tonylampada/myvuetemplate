@@ -4,7 +4,7 @@
       <button @click="showLive">Live</button>
       <div v-if="showcode">
         Look ma, the source
-        <pre>{{getcomponent(name).source}}</pre>
+        <pre>\{{getcomponent(name).source}}</pre>
       </div>
       <div v-if="!showcode">
         Look ma, the component

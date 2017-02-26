@@ -7,7 +7,7 @@
     <table class="table">
       <tr v-for="item in items">
         <td class="coluninha"><input class="checkbox" type="checkbox" v-model="item.done"></td>
-        <td :class="{riscado: item.done}">{{item.text}}</td>
+        <td :class="{riscado: item.done}">\{{item.text}}</td>
         <button class="button is-danger" @click="remove(item)">Remover</td>
       </tr>
     </table>

@@ -1,5 +1,5 @@
 <template>
-  <Issues>
+  <Issues></Issues>
 </template>
 
 <script>

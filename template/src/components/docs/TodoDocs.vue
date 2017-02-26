@@ -1,5 +1,5 @@
 <template>
-  <Todo>
+  <Todo></Todo>
 </template>
 
 <script>

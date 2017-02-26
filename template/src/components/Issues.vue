@@ -3,7 +3,7 @@
     <input type="text" v-model="username" @keyup.enter="findrepos" class="input" placeholder="Digite um usuario do github e aperte ENTER">
     <select v-model="repo" @change="findIssues" class="select">
       <option v-for="r in repos" v-bind:value="r">
-        {{ r.name }}
+        \{{ r.name }}
       </option>
     </select>
     <table class="table">
@@ -12,8 +12,8 @@
         <th>Title</th>
       </tr>
       <tr v-for="issue in issues">
-        <td>{{issue.number}}</td>
-        <td>{{issue.title}}</td>
+        <td>\{{issue.number}}</td>
+        <td>\{{issue.title}}</td>
       </tr>
     </table>
   </div>

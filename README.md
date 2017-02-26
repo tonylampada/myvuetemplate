@@ -24,9 +24,9 @@ $ npm run dev
 - Simple AJAX with [axios](https://www.npmjs.com/package/axios)
 - `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload.
 - `npm run build`: build with HTML/CSS/JS minification.
-- Backendless environment with [Mock APIs](#Mock APIs)
+- Backendless environment with [Mock APIs](#mock-apis)
 - `npm run unit`: Run unit tests, *with coverage reports* inside `/coverage`.
-- A [Component Catalog](#Component_Catalog)
+- A [Component Catalog](#component-catalog)
 
 ### Mock APIs
 

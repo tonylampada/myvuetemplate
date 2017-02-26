@@ -1,60 +1,50 @@
 <template>
-  <div id="app">
-    <img src="./assets/logo.png">
-    <h1>{{ msg }}</h1>
-    <h2>Essential Links</h2>
-    <ul>
-      <li><a href="https://vuejs.org" target="_blank">Core Docs</a></li>
-      <li><a href="https://forum.vuejs.org" target="_blank">Forum</a></li>
-      <li><a href="https://gitter.im/vuejs/vue" target="_blank">Gitter Chat</a></li>
-      <li><a href="https://twitter.com/vuejs" target="_blank">Twitter</a></li>
-    </ul>
-    <h2>Ecosystem</h2>
-    <ul>
-      <li><a href="http://router.vuejs.org/" target="_blank">vue-router</a></li>
-      <li><a href="http://vuex.vuejs.org/" target="_blank">vuex</a></li>
-      <li><a href="http://vue-loader.vuejs.org/" target="_blank">vue-loader</a></li>
-      <li><a href="https://github.com/vuejs/awesome-vue" target="_blank">awesome-vue</a></li>
-    </ul>
-  </div>
+  <MainLayout :menuitems="menuitems">
+    <router-view></router-view>
+  </MainLayout>
 </template>
 
 <script>
+import MainLayout from './components/MainLayout.vue'
+import VueRouter from 'vue-router'
+import Vue from 'vue'
+
 export default {
-  name: 'app',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      menuitems: [
+        {icon: 'tachometer', label: 'Dashboard', children:[
+          {label: 'Todo', routerpath: '/todo'},
+          {label: 'Issues', routerpath: '/issues'},
+        ]},
+        {icon: 'bar-chart-o', label: 'Bla'},
+        {icon: 'laptop', label: 'blum'},
+      ],
     }
+  },
+  components: {
+    MainLayout,
   }
 }
 </script>
 
-<style{{#sass}} lang="scss"{{/sass}}>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
 
-h1, h2 {
-  font-weight: normal;
-}
 
-ul {
-  list-style-type: none;
-  padding: 0;
-}
+/*
+@import '~bulma/sass/base/_all';
+@import '~bulma/sass/utilities/_all.sass';
+@import '~bulma/sass/elements/button.sass';
+*/
 
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
+@import '~bulma';
+@import '~font-awesome/css/font-awesome.css';
+@import '~animate.css';
 
-a {
-  color: #42b983;
-}
+/*
+Esse '~' se refere a "node_modules/"
+No caso, node_modules/bulma/package.json tem um atributo main = 'bulma.sass', portanto
+@import '~bulma' eh equivalente a @import '~bulma/bulma.sass';
+*/
+
 </style>

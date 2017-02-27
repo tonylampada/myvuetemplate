@@ -2,7 +2,7 @@
 
 A fork of [webpack-simple](https://github.com/vuejs-templates/webpack-simple) template, with a few additions of my own.
 
-In particular, there two things here that you might want to check out:
+In particular, there two things here that you might want to check out, I think those are pretty cool and really improve the development process for web applications:
 
 * The [use of mock-apis](https://medium.com/@tonylampada/javascript-mock-api-why-you-might-want-to-have-one-232b3ba46b12#.wjbs02z48)
 * The Component Catalog

@@ -36,7 +36,7 @@ $ npm run dev
 ### Mock APIs
 
 * [api.js](https://github.com/tonylampada/tlvuestarter/blob/master/template/src/api/api.js) - your real backend calls go here (in this case we are actually consuming endpoints from Github's api, so... replace with what makes sense for your backend).
-* [apimock.js](https://github.com/tonylampada/tlvuestarter/blob/master/template/src/api/apimock.js) - fake api. Returns hardcoded-ish data build with plain javascript.
+* [apimock.js](https://github.com/tonylampada/tlvuestarter/blob/master/template/src/api/apimock.js) - fake api. Have all the same methods on `api.js` but returns hardcoded-ish data build with plain javascript.
 
 When you fire the development environment with `npm run dev`, the fake api from `apimock.js` will be used, but when you build the production version with `npm run build`, the real api from `api.js` will be used instead (this is implemented using environment variables in `webpack-config.js`)
 

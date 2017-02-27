@@ -1,8 +1,13 @@
 # tlvuestarter
 
-> A fork of [webpack-simple](https://github.com/vuejs-templates/webpack-simple) template, with a few additions of my own.
-Now contrary of what `webpack-simple` says, I *do* encourage you to use this template for production projects.
+A fork of [webpack-simple](https://github.com/vuejs-templates/webpack-simple) template, with a few additions of my own.
 
+In particular, there two things here that you might want to check out:
+
+* The [use of mock-apis](https://medium.com/@tonylampada/javascript-mock-api-why-you-might-want-to-have-one-232b3ba46b12#.wjbs02z48)
+* The Component Catalog
+
+Contrary of what `webpack-simple` says, I *do* encourage you to use this template for production projects.
 
 ### Usage
 
@@ -35,12 +40,7 @@ $ npm run dev
 
 When you fire the development environment with `npm run dev`, the fake api from `apimock.js` will be used, but when you build the production version with `npm run build`, the real api from `api.js` will be used instead (this is implemented using environment variables in `webpack-config.js`)
 
-I found that this is usually a good idea for any web application for a number of reasons:
-
-1. You can have a apimock-based working prototype that you can validate without the need to write any backend code.
-2. It's easier to handoff work to a front-end developer that doesn't need to have a fully set-up backend environment with a database or other back-end stuff
-3. You can easily re-use the fake implementation from `apimock.js` inside your unit tests
-4. If you begin with the `apimock.js` what you end up with is an executable specification for your back-end service.
+[Why would I want to have that?](https://medium.com/@tonylampada/javascript-mock-api-why-you-might-want-to-have-one-232b3ba46b12#.wjbs02z48)
 
 ### Component Catalog
 

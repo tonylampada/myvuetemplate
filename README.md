@@ -1,11 +1,11 @@
 # tlvuestarter
 
-A fork of [webpack-simple](https://github.com/vuejs-templates/webpack-simple) template, with a few additions of my own.
+This is a fork of [webpack-simple](https://github.com/vuejs-templates/webpack-simple) template, with a few additions of my own.
 
 In particular, there two things here that you might want to check out, I think those are pretty cool and really improve the development process for web applications:
 
 * The [use of mock-apis](https://medium.com/@tonylampada/javascript-mock-api-why-you-might-want-to-have-one-232b3ba46b12#.wjbs02z48)
-* The [Component Catalog](https://medium.com/@tonylampada/component-catalog-why-you-might-want-to-have-one-72ee1dc1f6b1#.zgd3w9lhx)
+* The [Component Catalog](https://medium.com/@tonylampada/component-catalog-why-you-might-want-to-have-one-72ee1dc1f6b1#.zgd3w9lhx) (See a [live demo](https://tonylampada.github.io/tlvuestarter/docs.html#/view/TodoDocs))
 
 Contrary of what `webpack-simple` says, I *do* encourage you to use this template for production projects.
 
@@ -27,7 +27,7 @@ $ npm run dev
 - Styling with [Bulma CSS framework](http://bulma.io)
 - [Font Awesome](http://fontawesome.io) icons
 - Simple AJAX with [axios](https://www.npmjs.com/package/axios)
-- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload.
+- `npm run dev`: Webpack + `vue-loader` with proper config for source maps & hot-reload (See a [live demo](https://tonylampada.github.io/tlvuestarter/)).
 - `npm run build`: build with HTML/CSS/JS minification.
 - Backendless environment with [Mock APIs](#mock-apis)
 - `npm run unit`: Run unit tests, *with coverage reports* inside `/coverage`.

@@ -2,6 +2,8 @@ var path = require('path')
 var webpack = require('webpack')
 var ExtractTextPlugin = require("extract-text-webpack-plugin")
 
+var IS_DEV = process.env.NODE_ENV in {development: 1, test: 1};
+var IS_PROD = process.env.NODE_ENV === 'production'
 
 module.exports = {
   // entry: './src/main.js',
@@ -57,7 +59,7 @@ module.exports = {
     alias: {
       'vue$': 'vue/dist/vue.common.js',
       'src': path.resolve(__dirname, 'src'),
-      'apijs': path.resolve(__dirname, process.env.NODE_ENV in {development: 1, test: 1} ? 'src/api/apimock.js' : 'src/api/api.js'),
+      'apijs': path.resolve(__dirname, IS_DEV ? 'src/api/apimock.js' : 'src/api/api.js'),
     }
   },
   devServer: {
@@ -67,7 +69,7 @@ module.exports = {
   devtool: '#eval-source-map',
 }
 
-if (process.env.NODE_ENV === 'production') {
+if (IS_PROD) {
   module.exports.devtool = '#source-map'
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([

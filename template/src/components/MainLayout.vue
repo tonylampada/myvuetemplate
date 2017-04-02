@@ -1,31 +1,6 @@
 <template>
   <div id="main" :class="{'sidebar-active': show_sidebar}">
-    <section class="hero is-bold app-navbar animated slideInDown">
-      <div class="hero-head">
-        <nav class="nav">
-          <div class="nav-left">
-            <a class="nav-item is-hidden-tablet" @click="toggle_sidebar">
-              <i aria-hidden="true" class="fa fa-bars"></i>
-            </a>
-            <a href="#" class="nav-item">Esquerda</a>
-          </div>
-          <div class="nav-center">
-            <a href="#" class="nav-item">
-              <div aria-label="v0.1.9" class="is-hidden-mobile tooltip tooltip--right tooltip--success tooltip--small tooltip--rounded tooltip--always tooltip--no-animate">
-                <span class="vue">Teste</span>
-                <strong class="admin">Sidebar</strong>
-              </div>
-            </a>
-            <a href="#" class="nav-item">
-              Meio
-            </a>
-          </div> 
-          <div class="nav-right is-flex">
-            <a href="#" class="nav-item">Direita</a>
-          </div>
-        </nav>
-      </div>
-    </section>
+    <TopNavbar @menutoggle="toggle_sidebar()"></TopNavbar>
 
     <aside id="sidebar" class="menu app-sidebar animated">
       <p class="menu-label">
@@ -42,6 +17,7 @@
 
 <script>
 import TreeMenu from './TreeMenu.vue'
+import TopNavbar from './TopNavbar.vue'
 
 export default {
   data () {
@@ -59,6 +35,7 @@ export default {
   },
   components: {
     TreeMenu,
+    TopNavbar,
   }
 }
 </script>
@@ -67,12 +44,6 @@ export default {
 </style>
 
 <style scoped lang="scss">
-  .app-navbar {
-      position: fixed;
-      min-width: 100%;
-      z-index: 1024;
-      box-shadow: 0 2px 3px hsla(0,0%,7%,.1),0 0 0 1px hsla(0,0%,7%,.1)
-  }
   .app-main {
       padding-top: 50px;
       margin-left: 180px;
@@ -112,41 +83,4 @@ export default {
       }
   }
 
-  .app-navbar .container {
-      margin: auto 10px
-  }
-
-  .app-navbar .nav-right {
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      -ms-flex: 1;
-      flex: 1;
-      -ms-flex-pack: end;
-      justify-content: flex-end;
-      overflow: hidden;
-      overflow-x: auto;
-      white-space: nowrap
-  }
-
-  .app-sidebar .icon {
-      vertical-align: baseline
-  }
-
-  .app-sidebar .icon.is-angle {
-      position: absolute;
-      right: 10px;
-      transition: transform .377s ease
-  }
-
-  .app-sidebar .menu-label {
-      padding-left: 5px
-  }
-
-  .app-sidebar .menu-list li a[aria-expanded=true] .is-angle {
-      transform: rotate(180deg)
-  }
-
-  .app-sidebar .menu-list li a+ul {
-      margin: 0 10px 0 15px
-  }
 </style>

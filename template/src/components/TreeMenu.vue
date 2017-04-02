@@ -39,6 +39,26 @@ export default {
     
 </script>
 
-<style>
-    
+<style scoped lang="scss">
+  .icon {
+      vertical-align: baseline
+  }
+
+  .icon.is-angle {
+      position: absolute;
+      right: 10px;
+      transition: transform .377s ease
+  }
+
+  .menu-label {
+      padding-left: 5px
+  }
+
+  .menu-list li a[aria-expanded=true] .is-angle {
+      transform: rotate(180deg)
+  }
+
+  .menu-list li a+ul {
+      margin: 0 10px 0 15px
+  }
 </style>

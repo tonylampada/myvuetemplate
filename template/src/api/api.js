@@ -27,7 +27,7 @@ function list_issues(u, r){
 };
 
 function get(url, params){
-    return axios.get(url, params)
+    return axios.get(url, {params: params})
 }
 
 function post(url, params){
